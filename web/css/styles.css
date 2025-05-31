@@ -1,0 +1,214 @@
+/* Variables globales */
+:root {
+    --color-primary: #fd1818;
+    --color-primary-dark: #e1160d;
+    --color-text: #ffffff;
+    --color-text-secondary: #e0e0e0;
+    --color-background: #0f0f0f;
+    --color-background-dark: #080808;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --color-footer-background: #1a1a1a;
+    --color-footer-hover: #e1160d;
+    --color-success: #22f733;
+    --color-gold: #ffd700;
+}
+
+/* FONDO UNIFICADO PARA TODO EL SITIO */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--color-background-dark) !important; /* Mismo fondo que index */
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegurar que todas las secciones tengan el mismo fondo */
+section {
+    background-color: var(--color-background-dark) !important;
+}
+
+/* Alternar fondos solo cuando sea necesario para contraste */
+.bg-dark {
+    background-color: var(--color-background-dark) !important;
+}
+
+.bg-light {
+    background-color: var(--color-background) !important;
+}
+
+/* Texto básico */
+p, li, span, a:not(.btn) {
+    color: var(--color-text);
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtítulos */
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Elementos específicos */
+.pricing-features li,
+.footer-schedule li,
+.footer-contact li,
+.footer-links li a,
+.option-text p,
+.accordion-body p,
+.accordion-body li {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+/* Horarios */
+.schedule-class h4 {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.schedule-class p {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+/* Acordeón */
+.accordion-button {
+    color: var(--color-text) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--color-primary) !important;
+}
+
+.accordion-body {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+}
+
+/* Tarjetas de precios */
+.pricing-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-title {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.pricing-price .amount {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-background-dark) !important;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-heading {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.footer-description {
+    color: var(--color-text-secondary);
+}
+
+.footer-schedule li span,
+.footer-contact li i {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Botones */
+.btn-outline-danger {
+    border-width: 2px;
+}
+
+.btn-outline-danger:hover {
+    box-shadow: 0 5px 15px rgba(253, 24, 24, 0.4);
+}
+
+.btn-danger {
+    box-shadow: 0 5px 15px rgba(253, 24, 24, 0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 8px 20px rgba(253, 24, 24, 0.5);
+}
+
+/* Navegación */
+.nav-link {
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-pills .nav-link {
+    color: var(--color-text);
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 0 5px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 5px 15px rgba(253, 24, 24, 0.3);
+}
+
+/* Elementos de reserva */
+.option-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.option-icon {
+    color: var(--color-primary);
+}
+
+.option-text h4 {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* Hover general */
+a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Estadísticas */
+.stat-number {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.stat-text {
+    color: var(--color-text);
+    font-weight: 600;
+}

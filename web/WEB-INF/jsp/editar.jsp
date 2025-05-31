@@ -1,9 +1,3 @@
-<%-- 
-    Document   : editar
-    Created on : 24 may. 2025, 10:28:12
-    Author     : Administrador
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

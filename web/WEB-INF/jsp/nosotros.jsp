@@ -1,9 +1,3 @@
-<%-- 
-    Document   : nosotros
-    Created on : 30 may 2025, 0:49:37
-    Author     : Isabela
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -1,0 +1,137 @@
+/* Estilos para la sección de reserva */
+.reservation-section {
+  position: relative;
+}
+
+.reservation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/patterns/pattern-dots.png');
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.reservation-image {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.reservation-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.stat-text {
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reservation-content h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.option-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.option-icon {
+  flex: 0 0 60px;
+  height: 60px;
+  background-color: rgba(253, 24, 24, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.option-icon i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.option-text h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.option-text p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.reservation-cta {
+  text-align: center;
+}
+
+.phone-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .reservation-stats {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item {
+    margin-bottom: 0.5rem;
+  }
+}

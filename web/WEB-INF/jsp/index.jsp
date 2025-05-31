@@ -8,6 +8,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Imperium Cross - Inicio</title>
+        
+        <link href="css/whatsapp.css" rel="stylesheet" type="text/css"/>
+        <link href="css/about.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animation.css" rel="stylesheet" type="text/css"/>
+        <link href="css/faq.css" rel="stylesheet" type="text/css"/>
+        <link href="css/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="css/header.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pricing.css" rel="stylesheet" type="text/css"/>
+        <link href="css/reservation.css" rel="stylesheet" type="text/css"/>
+        <link href="css/schedule.css" rel="stylesheet" type="text/css"/>
+        <link href="css/slider.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
 
@@ -635,49 +649,5 @@
         <script src="js/navbar.js"></script>
         <script src="js/scroll-animations.js"></script>
         <script src="js/nosotros_linea-temporal.js"></script>
-
-    </body>
-</html>
-        
-        
-        <div class="container mt-4">
-            <div class="card">
-                <div class="card-header">
-                    <a href="agregar.htm" class="btn btn-danger">Nuevo Registro</a>
-                </div>
-                <div class="card-body">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>NOMBRES</th>
-                                <th>CORREO</th>
-                                <th>NACIONALIDAD</th>
-                                <th>ACCIONES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="dato" items="${lista}">
-                                <tr>
-                                    <td>${dato.Id}</td>
-                                    <td>${dato.Nombres}</td>
-                                    <td>${dato.Correo}</td>
-                                    <td>${dato.Nacionalidad}</td>
-                                    <td>
-                                        <a href="editar.htm?id=${dato.Id}" class="btn btn-success">Editar</a>
-                                        <a href="delete.htm?id=${dato.Id}" class="btn btn-warning">Delete</a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
-                    <a class="btn btn-primary" href="nosotros.htm">Nosotros</a>
-                    <a class="btn btn-primary" href="login.htm">Log In</a>
-                    <a class="btn btn-primary" href="register.htm">Registrarse</a>
-                    <a class="btn btn-primary" href="logout.htm">Cerrar sesión</a>
-                </div>
-            </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>

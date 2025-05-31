@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Register
-    Created on : 28 may. 2025, 11:20:10
-    Author     : Administrador
---%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

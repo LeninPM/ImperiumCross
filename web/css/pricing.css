@@ -1,0 +1,126 @@
+/* Estilos para la sección de precios */
+.pricing-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pricing-header {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.pricing-price .currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-right: 0.25rem;
+}
+
+.pricing-price .amount {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.pricing-price .period {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-left: 0.25rem;
+}
+
+.pricing-body {
+  padding: 2rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.pricing-features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li i {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.pricing-features li i.fa-check {
+  color: var(--color-success);
+}
+
+.pricing-features li i.fa-times {
+  color: var(--color-primary);
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  border-color: var(--color-primary);
+  z-index: 1;
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(253, 24, 24, 0.3);
+}
+
+@media (max-width: 992px) {
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
