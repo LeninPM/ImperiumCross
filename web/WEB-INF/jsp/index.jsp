@@ -21,7 +21,7 @@
         <link href="css/slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
 
@@ -501,7 +501,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="reservation-image">
-                            <img src="img/reserva-clase.jpg" alt="Clase de CrossFit" class="img-fluid rounded-custom">
+                            <img src="img/img-carrusel2.jpg" alt="Clase de CrossFit" class="img-fluid rounded-custom">
                             <div class="reservation-stats">
                                 <div class="stat-item">
                                     <div class="stat-number">500+</div>
@@ -573,7 +573,7 @@
                 <div class="row g-4">
                     <!-- Logo y descripción -->
                     <div class="col-lg-4">
-                        <img src="img/logo-texto.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
+                        <img src="img/stickers-reel-imperium-cross.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
                         <p class="footer-description">Somos más que un gimnasio, somos una comunidad comprometida con tu transformación física y mental a través del CrossFit.</p>
                         <div class="social-icons mt-4">
                             <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
@@ -610,7 +610,7 @@
                     <div class="col-lg-3 col-md-6">
                         <h5 class="footer-heading">Contacto</h5>
                         <ul class="footer-contact">
-                            <li><i class="bi bi-map-marker-alt"></i> 581, Prol. 28 de Julio, Lurigancho-Chosica</li>
+                            <li><i class="bi bi-map"></i> 581, Prol. 28 de Julio, Lurigancho-Chosica</li>
                             <li><i class="bi bi-whatsapp"></i> +51 907 100 926</li>
                             <li><i class="bi bi-envelope"></i> info@imperiumcross.com</li>
                         </ul>

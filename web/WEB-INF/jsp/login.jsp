@@ -1,48 +1,92 @@
-<%-- 
-    Document   : login
-    Created on : 28 may. 2025, 10:52:38
-    Author     : Administrador
---%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            .btn {
-                margin: 5px 0px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h3>Ingreso al Sistema</h3>
-                    <form action="login.htm" method="post">
-                        <p>
-                            <label for="cuenta">Ingrese correo</label>
-                            <input type="text" name="correo" class="form-control">
-                        </p>
-                        <p>
-                            <label for="clave">Ingrese tu contraseña</label>
-                            <input type="password" name="contrasena" class="form-control">
-                        </p>
-                        <input type="submit" value="Ingresar" class="btn btn-primary">
-                        
-                        <a class="btn btn-primary" href="register.htm">Registrarse</a>
-                        <a class="btn btn-primary" href="register.htm">Cerrar sesión</a>
-                    </form>
-                    <c:if test="${not empty error}">
-                        <p style="color:red">${error}</p>
-                    </c:if>
-                </div>
-            </div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Conecta Hogar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0D0D0D;
+      color: #fff;
+    }
+    h3 {
+      color: #E50914;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    .form-control {
+      background-color: #121212;
+      border: 1px solid #333;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .form-control::placeholder {
+      color: #888;
+    }
+    .form-control:focus {
+      border-color: #E50914;
+      box-shadow: none;
+    }
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #E50914, #B30000);
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      padding: 8px 25px;
+      margin-right: 10px;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #ff1a1a, #990000);
+    }
+    .container {
+      padding-top: 60px;
+    }
+    .error-text {
+      color: #ff4c4c;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-5">
+      <h3 class="text-center">Ingreso al Sistema</h3>
+      <form action="login.htm" method="post">
+        <p>
+          <label for="cuenta">Ingrese correo</label>
+          <input type="text" name="correo" class="form-control" placeholder="ejemplo@correo.com">
+        </p>
+        <p>
+          <label for="clave">Ingrese tu contraseña</label>
+          <input type="password" name="contrasena" class="form-control" placeholder="********">
+        </p>
+        <div class="d-flex flex-wrap justify-content-start">
+          <input type="submit" value="Ingresar" class="btn btn-primary mb-2">
+          <a class="btn btn-primary mb-2" href="register.htm">Registrarse</a>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+      </form>
+      <c:if test="${not empty error}">
+        <p class="error-text">${error}</p>
+      </c:if>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>

@@ -1,0 +1,13 @@
+.contenedor-marca {
+  text-align: center;
+  margin-top: 100px; /* Deja espacio debajo del navbar */
+  margin-bottom: 40px; /* Para que no pegue al siguiente section */
+}
+
+.marca {
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Hace que resalte más */
+}
