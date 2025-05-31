@@ -28,7 +28,8 @@ public class Controlador {
 
     int id;
     List datos;
-/*
+
+    /*
     @RequestMapping("index.htm")
     public ModelAndView Listar(HttpSession session) {
         if (session == null || session.getAttribute("usuario") == null) {
@@ -42,26 +43,23 @@ public class Controlador {
     }*/
     @RequestMapping("index.htm")
     public ModelAndView Inicio() {
-        
+
         mav.setViewName("index");
         return mav;
     }
-    
+
     @RequestMapping("nosotros.htm")
     public ModelAndView Nosotros() {
-        
+
         mav.setViewName("nosotros");
         return mav;
     }
-    
+
     @RequestMapping("dashboard.htm")
     public ModelAndView Listar(HttpSession session) {
         if (session == null || session.getAttribute("usuario") == null) {
             return new ModelAndView("redirect:/login.htm");
         }
-        String sql = "select * from persona";
-        datos = this.jdbcTemplate.queryForList(sql); //cambio
-        mav.addObject("lista", datos);
         mav.setViewName("dashboard");
         return mav;
     }
@@ -157,7 +155,7 @@ public class Controlador {
         mav.addObject("mensaje", "Sesión cerrada");
         return mav;
     }
-    
+
     //procesa el form register.jsp
     @RequestMapping(value = "register.htm", method = RequestMethod.GET)
     public ModelAndView Registrarse() {

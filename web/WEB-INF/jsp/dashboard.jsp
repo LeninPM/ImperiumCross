@@ -26,19 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="dato" items="${lista}">
-                                <tr>
-                                    <td>${dato.Id}</td>
-                                    <td>${dato.Nombres}</td>
-                                    <td>${dato.Correo}</td>
-                                    <td>${dato.Nacionalidad}</td>
-                                    <td>
-                                        <a href="editar.htm?id=${dato.Id}" class="btn btn-success">Editar</a>
-                                        <a href="delete.htm?id=${dato.Id}" class="btn btn-warning">Delete</a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </tbody>
+                         </tbody>
                     </table>
                     <a class="btn btn-primary" href="logout.htm">Cerrar sesión</a>
                 </div>
@@ -62,18 +50,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="dato" items="${lista}">
-                                <tr>
-                                    <td>${dato.Id}</td>
-                                    <td>${dato.Nombres}</td>
-                                    <td>${dato.Correo}</td>
-                                    <td>${dato.Nacionalidad}</td>
-                                    <td>
-                                        <a href="editar.htm?id=${dato.Id}" class="btn btn-success">Editar</a>
-                                        <a href="delete.htm?id=${dato.Id}" class="btn btn-warning">Delete</a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
                         </tbody>
                     </table>
                     <a class="btn btn-primary" href="nosotros.htm">Nosotros</a>

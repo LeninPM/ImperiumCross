@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 28 may. 2025, 10:52:38
-    Author     : Administrador
---%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,8 +7,7 @@
         <title>Iniciar sesión</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/styles-login.css"/>
     </head>
     <body>
@@ -81,7 +75,7 @@
                         ¿Aun no tienes una cuenta?<br />
                         Crea tu cuenta y empieza tu transformación
                     </p>
-                    <button class="btn register-btn">Registrarse</button>
+                    <a href="register.htm"><button class="btn register-btn">Registrarse</button></a>
                     <br>
                     <a class="navbar-brand" href="index.htm">
                         <img src="img/logo-blanco-design.ico" alt="Imperium Cross" height="50">
