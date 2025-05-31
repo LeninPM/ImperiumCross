@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Controller;
 
 import Config.Conexion;
@@ -9,12 +6,10 @@ import Model.Persona;
 import Model.Usuario;
 import java.util.List;
 import java.util.Map;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -60,6 +55,8 @@ public class Controlador {
         if (session == null || session.getAttribute("usuario") == null) {
             return new ModelAndView("redirect:/login.htm");
         }
+         String nombreUsuario = session.getAttribute("usuario").toString(); // Obtener nombre
+    mav.addObject("nombreUsuario", nombreUsuario);
         mav.setViewName("dashboard");
         return mav;
     }
@@ -165,9 +162,45 @@ public class Controlador {
     }
 
     @RequestMapping(value = "register.htm", method = RequestMethod.POST)
-    public ModelAndView Registrarse(Usuario user) {
-        String sql = "insert into usuario(nombre,edad,sexo,telefono,direccion,correo,contrasena) values(?,?,?,?,?,?,?)";
-        this.jdbcTemplate.update(sql, user.getNombre(), user.getEdad(), user.getSexo(), user.getTelefono(), user.getDireccion(), user.getCorreo(), user.getContrasena());
+public ModelAndView Registrarse(Usuario user, HttpServletRequest request) {
+    // 1. Guardar en base de datos
+    String sql = "insert into usuario(nombre,edad,sexo,telefono,direccion,correo,contrasena) values(?,?,?,?,?,?,?)";
+    this.jdbcTemplate.update(sql, user.getNombre(), user.getEdad(), user.getSexo(), user.getTelefono(), user.getDireccion(), user.getCorreo(), user.getContrasena());
+
+    // 2. Crear sesión e iniciar sesión automáticamente
+    HttpSession session = request.getSession();
+    session.setAttribute("usuario", user.getNombre()); // Asegúrate que 'nombre' está bien mapeado
+
+    // 3. Redirigir al dashboard
+    return new ModelAndView("redirect:/dashboard.htm");
+}
+    
+    
+   @RequestMapping("clases.htm")
+    public ModelAndView mostrarClases(HttpSession session) {
+        if (session == null || session.getAttribute("usuario") == null) {
+            return new ModelAndView("redirect:/login.htm");
+        }
+
+        String sql = "SELECT * FROM clases";
+        datos = jdbcTemplate.queryForList(sql);
+        mav = new ModelAndView("clases");
+        mav.addObject("clases", datos);
         return mav;
     }
+
+    @RequestMapping("entrenadores.htm")
+    public ModelAndView mostrarInstructor(HttpSession session) {
+        if (session == null || session.getAttribute("usuario") == null) {
+            return new ModelAndView("redirect:/login.htm");
+        }
+
+        String sql = "SELECT * FROM instructor";
+        datos = jdbcTemplate.queryForList(sql);
+        mav = new ModelAndView("entrenadores");
+        mav.addObject("entrenadores", datos);
+        return mav;
+    }
+    
+    
 }

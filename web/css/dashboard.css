@@ -1,0 +1,153 @@
+/* dashboard.css */
+
+/* Estilos base ImperiumCross */
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem; /* del otro CSS */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #111111;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ff4500 !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .navbar-toggler {
+    top: 0.25rem;
+    right: 1rem;
+}
+
+.form-control-dark {
+    background-color: #1e1e1e;
+    border: none;
+    color: #ffffff;
+}
+
+.form-control-dark::placeholder {
+    color: #cccccc;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    color: #727272;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #2e2e2e;
+    color: #ff4500;
+}
+
+.sidebar .nav-link.active .feather,
+.sidebar .nav-link:hover .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Cards */
+.card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff4500;
+    border: none;
+}
+
+.btn-outline-secondary {
+    border-color: #999;
+    color: #ccc;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #333;
+    color: #ff4500;
+    border-color: #ff4500;
+}
+
+.btn-outline-info {
+    border-color: #00bcd4;
+    color: #00bcd4;
+}
+
+.btn-outline-info:hover {
+    background-color: #00bcd4;
+    color: #000;
+}
+
+/* Borders */
+.border-bottom {
+    border-bottom: 1px solid #333 !important;
+}

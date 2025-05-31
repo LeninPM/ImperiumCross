@@ -1,15 +1,12 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Dashboard Cliente - ImperiumCross</title>
-
+        <meta charset="UTF-8" />
+        <title>Clases - ImperiumCross</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/dashboard.css" rel="stylesheet" />
-
     </head>
     <body>
         <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow">
@@ -24,12 +21,11 @@
 
         <div class="container-fluid">
             <div class="row">
-                <!-- Sidebar -->
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                                <a class="nav-link" href="dashboard.htm">
                                     <span data-feather="home"></span>
                                     Inicio
                                 </a>
@@ -37,11 +33,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="entrenadores.htm">
                                     <span data-feather="calendar"></span>
-                                    Instructores
+                                    Entrenadores
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="clases.htm">
+                                <a class="nav-link active" href="clases.htm">
                                     <span data-feather="calendar"></span>
                                     Reservar clases
                                 </a>
@@ -59,58 +55,40 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="logout.htm">
+                                <a class="nav-link" href="#">
                                     <span data-feather="credit-card"></span>
-                                    Cerrar Sesión
+                                    Pagos
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
 
-                <!-- Contenido principal -->
+
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Bienvenido, ${nombreUsuario} </h1>
+                    <div class="d-flex justify-content-between pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Clases Disponibles</h1>
                     </div>
+
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">Clases disponibles</h5>
-                                    <p class="card-text">Consulta el horario y reserva tu cupo.</p>
-                                    <a href="clases.htm" class="btn btn-primary">Ver clases</a>
+                        <c:forEach var="clase" items="${clases}">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mb-4 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${clase.nombre}</h5>
+                                        <p class="card-text">
+                                            Inicio: ${clase.fecha_inicio}<br />
+                                            Fin: ${clase.fecha_fin}<br />
+                                            Cupos disponibles: ${clase.cupos}
+                                        </p>
+                                        <a href="reservar.htm?id=${clase.id_clase}" class="btn btn-primary">Reservar</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tu suscripción</h5>
-                                    <p class="card-text">Estado: Activa<br>Válida hasta: 30/06/2025</p>
-                                    <a href="#" class="btn btn-outline-secondary">Renovar</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">Perfil</h5>
-                                    <p class="card-text">Revisa y edita tus datos personales.</p>
-                                    <a href="#" class="btn btn-outline-info">Editar perfil</a>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
                     </div>
                 </main>
             </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
-        <script>
-            feather.replace();
-        </script>
     </body>
 </html>

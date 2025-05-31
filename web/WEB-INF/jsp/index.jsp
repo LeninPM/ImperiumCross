@@ -44,10 +44,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.htm">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.htm#horarios">Horarios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.htm#planes">Planes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.htm#faq">Preguntas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.htm#reserva">Reserva Ahora</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reserva">Reserva Ahora</a></li>
                         <li class="nav-item"><a class="nav-link" href="nosotros.htm">Sobre Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link btn-reserva" href="register.htm">Registrar</a></li>
                         <li class="nav-item"><a class="nav-link btn-reserva" href="login.htm">Ingresar</a></li>
@@ -58,10 +58,7 @@
         <!-- HERO SECTION MEJORADO -->
         <header class="hero-section">
             <div class="video-container">
-                <video autoplay muted loop id="heroVideo">
-                    <source src="img/fondo_video.mp4" type="video/mp4">
-                    Your browser does not support the <code>video</code> tag.
-                </video>
+                <img src="img/img-carrusel3.jpg" alt="Clase de CrossFit" class="img-fluid rounded-custom">
                 <div class="overlay"></div>
             </div>
             <div class="container h-100">
@@ -86,7 +83,7 @@
             <div class="container">
                 <div class="row text-center mb-5">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="section-title">HORARIOS DE <span class="text-danger">CLASES</span></h2>
+                        <h2 class="section-title">HORARIOS DE <span class="text-danger">CLASES</span></h2><p>
                         <p class="section-subtitle">Encuentra el horario que mejor se adapte a tu rutina</p>
                     </div>
                 </div>
@@ -573,7 +570,7 @@
                 <div class="row g-4">
                     <!-- Logo y descripción -->
                     <div class="col-lg-4">
-                        <img src="img/stickers-reel-imperium-cross.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
+                        <img src="img/logo-texto.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
                         <p class="footer-description">Somos más que un gimnasio, somos una comunidad comprometida con tu transformación física y mental a través del CrossFit.</p>
                         <div class="social-icons mt-4">
                             <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
@@ -648,6 +645,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/navbar.js"></script>
         <script src="js/scroll-animations.js"></script>
-        <script src="js/nosotros_linea-temporal.js"></script>
     </body>
 </html>

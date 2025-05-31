@@ -1,0 +1,67 @@
+body {
+    background-color: #0D0D0D; /* Fondo negro */
+    color: #fff;
+}
+.card {
+    background-color: #191919;
+    border-top: 4px solid #E50914; /* Rojo fuerte */
+    border-radius: 10px;
+    padding: 30px 25px;
+    color: #fff;
+}
+h4 {
+    font-weight: 700;
+    color: #E50914;
+}
+.division {
+    position: relative;
+    text-align: center;
+    margin: 30px 0 25px;
+}
+.division::before,
+.division::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #444;
+}
+.division::before {
+    left: 0;
+}
+.division::after {
+    right: 0;
+}
+.division span {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+.form-control {
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+.form-control::placeholder {
+    color: #888;
+}
+.form-control:focus {
+    border-color: #E50914;
+    box-shadow: none;
+}
+.btn-register {
+    background: linear-gradient(135deg, #E50914, #B30000);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+.btn-register:hover {
+    background: linear-gradient(135deg, #ff1a1a, #990000);
+}

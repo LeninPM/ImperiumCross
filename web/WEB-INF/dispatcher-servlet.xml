@@ -25,6 +25,8 @@
                 <prop key="logout.htm">controlador</prop>
                 <prop key="register.htm">controlador</prop>
                 <prop key="dashboard.htm">controlador</prop>
+                <prop key="clases.htm">controlador</prop>
+                <prop key="entrenadores.htm">controlador</prop>
             </props>
         </property>
     </bean>
