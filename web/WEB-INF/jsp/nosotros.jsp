@@ -12,12 +12,9 @@
         <link href="css/whatsapp.css" rel="stylesheet" type="text/css"/>
         <link href="css/about.css" rel="stylesheet" type="text/css"/>
         <link href="css/animation.css" rel="stylesheet" type="text/css"/>
-        <link href="css/faq.css" rel="stylesheet" type="text/css"/>
         <link href="css/footer.css" rel="stylesheet" type="text/css"/>
         <link href="css/header.css" rel="stylesheet" type="text/css"/>
         <link href="css/pricing.css" rel="stylesheet" type="text/css"/>
-        <link href="css/reservation.css" rel="stylesheet" type="text/css"/>
-        <link href="css/schedule.css" rel="stylesheet" type="text/css"/>
         <link href="css/slider.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         
@@ -274,7 +271,7 @@
                 <div class="row g-4">
                     <!-- Logo y descripción -->
                     <div class="col-lg-4">
-                        <img src="img/stickers-reel-imperium-cross.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
+                        <img src="img/logo-texto.png" alt="Imperium Cross" class="footer-logo mb-4" height="60">
                         <p class="footer-description">Somos más que un gimnasio, somos una comunidad comprometida con tu transformación física y mental a través del CrossFit.</p>
                         <div class="social-icons mt-4">
                             <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
